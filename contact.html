@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Magic Marine Service - Professional marine maintenance solutions. Get in touch for service inquiries.">
+    <title>Contact Us - Magic Marine Service</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">Magic Marine</div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="dealers.html">Dealers</a></li>
+                    <li><a href="about.html">About</a></li>                    <li><a href="contact.html" class="btn btn-coupon">🎉 $500 Coupon</a></li>                    <li><a href="contact.html" class="active btn btn-primary">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch with our team for service inquiries and support</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-intro">
+                <img src="Gallery/Boats.webp" alt="Our diverse fleet services" style="width: 100%; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 12px 32px rgba(10, 31, 51, 0.15);">
+            </div>
+            <div class="sales-intro">
+                <h2>Request a Quote or Schedule a Service</h2>
+                <p>Whether you need routine maintenance, emergency repairs, yacht controller installation, or a professional consultation, our team is ready to assist. Fill out the form below to get started, and we'll provide you with a detailed quote and timeline.</p>
+            </div>
+            <div class="contact-wrapper">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Have questions about our services? We're here to help.</p>
+                    
+                    <div class="info-group">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+1234567890">(123) 456-7890</a></p>
+                        <p class="small">Available Monday - Friday, 8am - 6pm</p>
+                    </div>
+
+                    <div class="info-group">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@magicmarine.com">info@magicmarine.com</a></p>
+                        <p class="small">We typically respond within 24 hours</p>
+                    </div>
+
+                    <div class="info-group">
+                        <h3>Emergency Support</h3>
+                        <p><a href="tel:+1234567899">(123) 456-7899</a></p>
+                        <p class="small">24/7 emergency assistance available</p>
+                    </div>
+
+                    <div class="contact-highlight">
+                        <p><strong>Response Time:</strong> We aim to respond to all inquiries within 24 hours during business hours.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send us a Message</h2>
+                    <form name="contact" method="POST" netlify class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vessel">Vessel Type</label>
+                            <select id="vessel" name="vessel">
+                                <option value="">Select vessel type</option>
+                                <option value="yacht">Yacht</option>
+                                <option value="motorboat">Motorboat</option>
+                                <option value="sailboat">Sailboat</option>
+                                <option value="commercial">Commercial Vessel</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Needed *</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select service</option>
+                                <option value="maintenance">Routine Maintenance</option>
+                                <option value="repair">Repairs & Troubleshooting</option>
+                                <option value="inspection">Vessel Inspection</option>
+                                <option value="engine">Engine Services</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Contact Us -->
+    <section class="contact-benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Contact Magic Marine</h2>
+                <p>Experience professional marine service</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>Expert Consultation</h4>
+                    <p>Discuss your vessel's needs with experienced professionals</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Custom Solutions</h4>
+                    <p>We tailor our services to meet your specific requirements</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Transparent Pricing</h4>
+                    <p>Clear estimates and no hidden fees for any service</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>Fast Response</h4>
+                    <p>Quick turnaround on inquiries and urgent service requests</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Magic Marine Service</h4>
+                    <p>Professional marine maintenance and yacht services</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p>Phone: <a href="tel:+1234567890">(123) 456-7890</a></p>
+                    <p>Email: <a href="mailto:info@magicmarine.com">info@magicmarine.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Magic Marine Service. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
