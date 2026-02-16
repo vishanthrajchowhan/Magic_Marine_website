@@ -470,16 +470,49 @@ section {
 
 .service-card-large {
     background-color: var(--light-gray);
-    padding: 2.5rem;
+    padding: 0;
     border-radius: 12px;
     border: 1px solid var(--light-border);
     transition: var(--transition);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .service-card-large:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
     background-color: var(--white);
+}
+
+.service-image-container {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, var(--accent-blue), #1d5fc8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card-large:hover .service-image-container img {
+    transform: scale(1.05);
+}
+
+.service-header,
+.service-card-large p,
+.service-features,
+.service-card-large .btn {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
 }
 
 .service-header {
@@ -508,6 +541,7 @@ section {
 
 .service-features {
     list-style: none;
+    margin-bottom: 1.5rem;
 }
 
 .service-features li {
@@ -524,6 +558,10 @@ section {
     left: 0;
     color: var(--accent-blue);
     font-weight: bold;
+}
+
+.service-card-large .btn {
+    margin-bottom: 2.5rem;
 }
 
 /* ===== PRODUCT GRID ===== */
@@ -842,11 +880,16 @@ section {
     box-shadow: var(--shadow-md);
     transition: var(--transition);
     cursor: pointer;
+    display: block;
 }
 
 .gallery-item:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+}
+
+a.gallery-item:hover p {
+    color: var(--accent-blue);
 }
 
 .gallery-item img {
