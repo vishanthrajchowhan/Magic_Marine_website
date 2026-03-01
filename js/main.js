@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
     initSmoothScroll();
     initFormHandler();
+    initFAQToggle();
 });
 
 /* ===== MOBILE MENU TOGGLE ===== */
@@ -264,6 +265,29 @@ function isElementInViewport(element) {
         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
+}
+
+/* ===== FAQ TOGGLE ===== */
+function initFAQToggle() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        if (question) {
+            question.addEventListener('click', function() {
+                // Close other open items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        }
+    });
 }
 
 /* ===== CONSOLE MESSAGES ===== */

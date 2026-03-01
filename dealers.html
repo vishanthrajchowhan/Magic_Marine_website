@@ -6,6 +6,8 @@
     <meta name="description" content="Authorized Yacht Controller Dealer - Magic Marine Service offers professional yacht controller installation and support.">
     <title>Authorized Dealers - Magic Marine Service</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/jpeg" href="Gallery/Logo.jpg">
+    <link rel="shortcut icon" type="image/jpeg" href="Gallery/Logo.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +15,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-content">
-                <div class="logo">Magic Marine</div>
+                <a href="index.html" class="logo" aria-label="Magic Marine Home"><img src="Gallery/Logo.jpg" alt="Magic Marine logo"></a>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle">
                     <span></span>
                     <span></span>
@@ -46,6 +48,9 @@
                 <h2>Yacht Controller Solutions</h2>
                 <p>Professional installation and support for marine automation systems</p>
             </div>
+            <div class="controller-cta" style="text-align: center; margin: 2rem 0;">
+                <a href="#yacht-controller-section" class="btn btn-primary" style="font-size: 1.1rem;">Access Yacht Controller Platform</a>
+            </div>
             <div class="product-list">
                 <!-- Product Listing 1 -->
                 <div class="product-listing">
@@ -62,7 +67,7 @@
                             <li>✓ Crew training included</li>
                         </ul>
                         <div class="listing-cta">
-                            <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                            <a href="contact.html" class="btn btn-primary">Schedule an appointment</a>
                         </div>
                     </div>
                 </div>
@@ -82,7 +87,7 @@
                             <li>✓ Preventative maintenance</li>
                         </ul>
                         <div class="listing-cta">
-                            <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                            <a href="contact.html" class="btn btn-primary">Schedule an appointment</a>
                         </div>
                     </div>
                 </div>
@@ -102,11 +107,28 @@
                             <li>✓ Enhanced automation features</li>
                         </ul>
                         <div class="listing-cta">
-                            <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                            <a href="contact.html" class="btn btn-primary">Schedule an appointment</a>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Yacht Controller Embed Section -->
+    <section class="yacht-controller-section" id="yacht-controller-section">
+        <style type="text/css">
+            .iframe-responsive iframe {
+                margin: 0px;
+                display: block;
+                height: 100vh;
+                width: 100%;
+                border: none;
+                background: white;
+            }
+        </style>
+        <div class="iframe-responsive">
+            <iframe src="https://www.yachtcontroller.com/dealer-embed/?dealer=Magic Marine Service&demail=david@magicmarineservice.com" allow="fullscreen" frameborder="0"></iframe>
         </div>
     </section>
 
@@ -143,3 +165,5 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
+
