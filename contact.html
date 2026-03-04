@@ -25,7 +25,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="dealers.html">Dealers</a></li>
-                    <li><a href="about.html">About</a></li>                    <li><a href="contact.html" class="btn btn-coupon">🎉 $500 Coupon</a></li>                    <li><a href="contact.html" class="active btn btn-primary">Contact</a></li>
+                    <li><a href="about.html">About</a></li>                    <li><a href="https://www.yachtcontroller.com/dealer-embed/?dealer=Magic" class="btn btn-dealer" aria-label="Yacht Controller Dealer"><img src="Gallery/Dealerslogo.jpg" alt="Yacht Controller logo" class="dealer-link-logo"></a></li>                    <li><a href="contact.html" class="active btn btn-primary">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -110,10 +110,14 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="service">Service Needed *</label>
+                            <label for="vesselLocation">Vessel Location</label>
+                            <input type="text" id="vesselLocation" name="vesselLocation" placeholder="Marina / City">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
                             <select id="service" name="service" required>
-                                <option value="">Select service</option>
-                                <option value="maintenance">Routine Maintenance</option>
+                                <option value="maintenance" selected>Routine Maintenance (Recommended)</option>
                                 <option value="repair">Repairs & Troubleshooting</option>
                                 <option value="inspection">Vessel Inspection</option>
                                 <option value="engine">Engine Services</option>
@@ -122,7 +126,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Message</label>
+                            <label for="message">Additional Info</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
 
@@ -148,10 +152,6 @@
                 <div class="benefit-item">
                     <h4>Custom Solutions</h4>
                     <p>We tailor our services to meet your specific requirements</p>
-                </div>
-                <div class="benefit-item">
-                    <h4>Transparent Pricing</h4>
-                    <p>Clear estimates and no hidden fees for any service</p>
                 </div>
                 <div class="benefit-item">
                     <h4>Fast Response</h4>
