@@ -145,6 +145,52 @@ p {
     box-shadow: var(--shadow-lg);
 }
 
+.btn-yatch-group {
+    background: linear-gradient(135deg, #0f5132 0%, #198754 100%);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.nav-menu li a.btn-yatch-group,
+.nav-menu li a.btn-yatch-group:hover,
+.nav-menu li a.btn-yatch-group.active {
+    color: var(--white);
+}
+
+.btn-yatch-group:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-amazon {
+    background: linear-gradient(135deg, #ffb84d 0%, #ff9900 100%);
+    color: #1a1a1a;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.nav-menu li a.btn-amazon,
+.nav-menu li a.btn-amazon:hover,
+.nav-menu li a.btn-amazon.active {
+    color: #1a1a1a;
+}
+
+.btn-amazon:hover {
+    background: linear-gradient(135deg, #ffa726 0%, #f08c00 100%);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
 .dealer-link-logo {
     width: 150px;
     height: 28px;
@@ -169,8 +215,9 @@ p {
 
 /* ===== NAVIGATION ===== */
 .navbar {
-    background-color: var(--white);
-    box-shadow: var(--shadow-sm);
+    background: linear-gradient(180deg, #0b0b0d 0%, #111317 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -205,20 +252,22 @@ p {
 
 .nav-menu {
     display: flex;
-    gap: 2rem;
+    gap: 1.1rem;
     align-items: center;
 }
 
 .nav-menu li a {
-    color: var(--dark-gray);
-    font-weight: 500;
+    color: #e9eef5;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
     transition: var(--transition);
     position: relative;
 }
 
 .nav-menu li a:hover,
 .nav-menu li a.active {
-    color: var(--accent-blue);
+    color: #7fb5ff;
 }
 
 .nav-menu li a.active::after {
@@ -228,7 +277,17 @@ p {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--accent-blue);
+    background-color: #7fb5ff;
+}
+
+.nav-menu li a.btn::after {
+    display: none;
+}
+
+.nav-menu li a.btn-primary,
+.nav-menu li a.btn-primary:hover,
+.nav-menu li a.btn-primary.active {
+    color: var(--white);
 }
 
 /* Mobile Menu Toggle */
@@ -244,7 +303,7 @@ p {
 .mobile-menu-toggle span {
     width: 25px;
     height: 3px;
-    background-color: var(--navy);
+    background-color: #f5f7fb;
     border-radius: 2px;
     transition: var(--transition);
 }
@@ -319,6 +378,28 @@ p {
 /* ===== SECTION STYLING ===== */
 section {
     padding: 80px 0;
+}
+
+.amazon-shop {
+    background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
+    padding: 56px 0;
+}
+
+.amazon-shop-card {
+    background: var(--white);
+    border: 1px solid var(--light-border);
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    padding: 2rem;
+    text-align: center;
+}
+
+.amazon-shop-card h2 {
+    margin-bottom: 0.6rem;
+}
+
+.amazon-shop-card p {
+    margin-bottom: 1.2rem;
 }
 
 .section-header {
@@ -1238,18 +1319,19 @@ a.gallery-item:hover p {
         left: 0;
         right: 0;
         flex-direction: column;
-        background-color: var(--white);
-        padding: 1rem;
+        background: #0f1116;
+        padding: 1rem 1.25rem;
         gap: 0;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        box-shadow: var(--shadow-md);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.26);
         z-index: 20;
     }
 
     .nav-menu.active {
-        max-height: 360px;
+        max-height: 560px;
     }
 
     .nav-menu li {
@@ -1281,17 +1363,18 @@ a.gallery-item:hover p {
         left: 0;
         right: 0;
         flex-direction: column;
-        background-color: var(--white);
-        padding: 1rem;
+        background: #0f1116;
+        padding: 1rem 1.25rem;
         gap: 0;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
-        box-shadow: var(--shadow-md);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.26);
     }
 
     .nav-menu.active {
-        max-height: 300px;
+        max-height: 560px;
     }
 
     .nav-menu li {
