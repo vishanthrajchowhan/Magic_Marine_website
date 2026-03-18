@@ -825,7 +825,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: stretch;
 }
 
 .about-text h2 {
@@ -841,8 +841,18 @@ section {
 
 .about-image {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
+    min-height: 100%;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 12px 32px rgba(10, 31, 51, 0.15);
+    display: block;
 }
 
 .image-placeholder {
