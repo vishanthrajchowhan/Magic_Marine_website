@@ -79,10 +79,11 @@ function initFormHandler() {
     const contactForm = document.querySelector('.contact-form');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', function(event) {
+        contactForm.addEventListener('submit', async function(event) {
             // Form validation
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
             const service = document.getElementById('service').value;
             const message = document.getElementById('message').value.trim();
 
@@ -99,6 +100,11 @@ function initFormHandler() {
                 isValid = false;
             }
 
+            if (!phone) {
+                errors.push('Phone number is required');
+                isValid = false;
+            }
+
             if (!service) {
                 errors.push('Please select a service');
                 isValid = false;
@@ -112,7 +118,40 @@ function initFormHandler() {
             if (!isValid) {
                 event.preventDefault();
                 showFormError(errors);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+
+            event.preventDefault();
+
+            const formStatus = document.getElementById('formStatus');
+            setFormStatus(formStatus, 'Submitting your request...', 'is-success');
+
+            try {
+                const formData = new FormData(contactForm);
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    headers: {
+                        Accept: 'application/json'
+                    },
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Request failed');
+                }
+
+                setFormStatus(
+                    formStatus,
+                    'Thanks! Your message has been sent. We will contact you shortly.',
+                    'is-success'
+                );
+                contactForm.reset();
+            } catch (error) {
+                setFormStatus(
+                    formStatus,
+                    'We could not submit your message right now. Please call 954 405 0717 or email david@magicmarineservice.com.',
+                    'is-error'
+                );
             }
         });
     }
@@ -126,36 +165,18 @@ function isValidEmail(email) {
 
 /* ===== FORM ERROR DISPLAY ===== */
 function showFormError(errors) {
-    const contactForm = document.querySelector('.contact-form');
-    if (!contactForm) return;
+    const formStatus = document.getElementById('formStatus');
+    if (!formStatus) return;
 
-    // Remove existing error message if any
-    const existingError = contactForm.querySelector('.form-error');
-    if (existingError) {
-        existingError.remove();
-    }
+    const errorMessage = `Please correct the following: ${errors.join(', ')}`;
+    setFormStatus(formStatus, errorMessage, 'is-error');
+}
 
-    // Create error message element
-    const errorDiv = document.createElement('div');
-    errorDiv.className = 'form-error';
-    errorDiv.style.cssText = `
-        background-color: #fee;
-        color: #c33;
-        padding: 1rem;
-        border-radius: 8px;
-        margin-bottom: 1rem;
-        border-left: 4px solid #c33;
-    `;
-
-    const errorList = errors.map(error => `<li style="margin-left: 1.5rem;">${error}</li>`).join('');
-    errorDiv.innerHTML = `
-        <strong>Please correct the following errors:</strong>
-        <ul style="margin-top: 0.5rem;">
-            ${errorList}
-        </ul>
-    `;
-
-    contactForm.insertBefore(errorDiv, contactForm.firstChild);
+function setFormStatus(statusElement, message, statusClass) {
+    if (!statusElement) return;
+    statusElement.classList.remove('is-error', 'is-success');
+    statusElement.classList.add(statusClass);
+    statusElement.textContent = message;
 }
 
 /* ===== PAGE LOAD ANIMATIONS ===== */

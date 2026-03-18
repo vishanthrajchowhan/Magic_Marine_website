@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact Magic Marine Service - Professional marine maintenance solutions. Get in touch for service inquiries.">
+    <meta property="og:title" content="Magic Marine Service">
+    <meta property="og:description" content="Professional marine maintenance, repairs, inspections, and yacht services.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://magicmarineservice.com/Gallery/Logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Magic Marine Service">
+    <meta name="twitter:description" content="Professional marine maintenance, repairs, inspections, and yacht services.">
+    <meta name="twitter:image" content="https://magicmarineservice.com/Gallery/Logo.jpg">
     <title>Contact Us - Magic Marine Service</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/jpeg" href="Gallery/Logo.jpg">
@@ -15,7 +23,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-content">
-                <a href="index.html" class="logo" aria-label="Magic Marine Home"><img src="Gallery/Logo.jpg" alt="Magic Marine logo"></a>
+                <a href="index.html" class="logo" aria-label="Magic Marine Home"><img src="Gallery/Logo.jpg" alt="Magic Marine logo" width="210" height="46" loading="lazy" decoding="async"></a>
                 <button class="mobile-menu-toggle" id="mobileMenuToggle">
                     <span></span>
                     <span></span>
@@ -25,7 +33,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="services.html">Services</a></li>
                     <li><a href="dealers.html">Dealers</a></li>
-                    <li><a href="about.html">About</a></li>                    <li><a href="https://www.yachtcontroller.com/dealer-embed/?dealer=Magic" class="btn btn-dealer" aria-label="Yacht Controller Dealer"><img src="Gallery/Dealerslogo.jpg" alt="Yacht Controller logo" class="dealer-link-logo"></a></li><li><a href="https://www.theyachtgroup.com/dealer-landing-page/?logo=https://www.theyachtgroup.com/wp-content/uploads/2026/03/ff-c7fed46491ce0eb1a01ebea1253b6936-ff-magic-marine-service.png&amp;voucher=MAGICMATY3&amp;dealer=Magic Marine Service&amp;phone=305-978-1786&amp;demail=david@magicmarineservice.com" class="btn btn-yatch-group" aria-label="The Yacht Group">The Yacht Group</a></li><li><a href="https://www.amazon.com/dp/B0CWYWL35G" class="btn btn-amazon" aria-label="Shop on Amazon" target="_blank" rel="noopener noreferrer">Shop on Amazon</a></li>                    <li><a href="contact.html" class="active btn btn-primary">Contact</a></li>
+                    <li><a href="about.html">About</a></li>                    <li><a href="https://www.yachtcontroller.com/dealer-embed/?dealer=Magic" class="btn btn-dealer" aria-label="Yacht Controller Dealer"><img src="Gallery/Dealerslogo.jpg" alt="Yacht Controller logo" class="dealer-link-logo" width="150" height="28" loading="lazy" decoding="async"></a></li><li><a href="https://www.theyachtgroup.com/dealer-landing-page/?logo=https://www.theyachtgroup.com/wp-content/uploads/2026/03/ff-c7fed46491ce0eb1a01ebea1253b6936-ff-magic-marine-service.png&amp;voucher=MAGICMATY3&amp;dealer=Magic Marine Service&amp;phone=954-405-0717&amp;demail=david@magicmarineservice.com" class="btn btn-yacht-group" aria-label="The Yacht Group">The Yacht Group</a></li><li><a href="https://www.amazon.com/dp/B0CWYWL35G" class="btn btn-amazon" aria-label="Shop on Amazon" target="_blank" rel="noopener noreferrer">Shop on Amazon</a></li>                    <li><a href="contact.html" class="active btn btn-primary">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -43,7 +51,7 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-intro">
-                <img src="Gallery/Boats.webp" alt="Our diverse fleet services" style="width: 100%; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 12px 32px rgba(10, 31, 51, 0.15);">
+                <img src="Gallery/Boats.webp" alt="Our diverse fleet services" style="width: 100%; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 12px 32px rgba(10, 31, 51, 0.15);" loading="lazy" decoding="async" width="1200" height="800">
             </div>
             <div class="sales-intro">
                 <h2>Schedule an appointment or Schedule a Service</h2>
@@ -81,20 +89,24 @@
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper">
                     <h2>Send us a Message</h2>
+                    <p class="form-hint">Fields marked with * are required.</p>
                     <form name="contact" method="POST" action="https://formspree.io/f/xlgwbydj" class="contact-form">
+                        <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email Address</label>
+                            <label for="email">Email Address *</label>
                             <input type="email" id="email" name="email" required>
+                            <small class="field-hint">We will use this to reply to your request.</small>
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" required pattern="[0-9\-\+\s\(\)]{7,}">
+                            <small class="field-hint">Example: 954 405 0717</small>
                         </div>
 
                         <div class="form-group">
@@ -161,6 +173,11 @@
         </div>
     </section>
 
+    <!-- Mobile Quick CTA -->
+    <div class="mobile-quick-cta" aria-label="Quick contact actions">
+        <a href="tel:+19544050717" class="mobile-quick-cta-call">Call Now</a>
+        <a href="mailto:david@magicmarineservice.com" class="mobile-quick-cta-email">Email</a>
+    </div>
     <!-- Footer -->
     <footer class="footer">
         <div class="container">

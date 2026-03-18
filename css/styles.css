@@ -145,7 +145,7 @@ p {
     box-shadow: var(--shadow-lg);
 }
 
-.btn-yatch-group {
+.btn-yacht-group {
     background: linear-gradient(135deg, #0f5132 0%, #198754 100%);
     color: var(--white);
     display: inline-flex;
@@ -156,13 +156,13 @@ p {
     white-space: nowrap;
 }
 
-.nav-menu li a.btn-yatch-group,
-.nav-menu li a.btn-yatch-group:hover,
-.nav-menu li a.btn-yatch-group.active {
+.nav-menu li a.btn-yacht-group,
+.nav-menu li a.btn-yacht-group:hover,
+.nav-menu li a.btn-yacht-group.active {
     color: var(--white);
 }
 
-.btn-yatch-group:hover {
+.btn-yacht-group:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
@@ -1160,6 +1160,39 @@ a.gallery-item:hover p {
     gap: 1.5rem;
 }
 
+.form-status {
+    display: none;
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    font-weight: 600;
+}
+
+.form-status.is-error {
+    display: block;
+    background: #fff1f2;
+    border-left: 4px solid #dc3545;
+    color: #842029;
+}
+
+.form-status.is-success {
+    display: block;
+    background: #ecfdf3;
+    border-left: 4px solid #198754;
+    color: #0f5132;
+}
+
+.form-hint {
+    font-size: 0.9rem;
+    color: #516174;
+    margin: -0.25rem 0 0.25rem;
+}
+
+.field-hint {
+    margin-top: 0.4rem;
+    color: #6a7a8d;
+    font-size: 0.82rem;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -1276,6 +1309,43 @@ a.gallery-item:hover p {
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
+}
+
+/* ===== MOBILE QUICK CTA ===== */
+.mobile-quick-cta {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-quick-cta {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1100;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .mobile-quick-cta a {
+        text-align: center;
+        padding: 0.9rem 0.75rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    .mobile-quick-cta-call {
+        background: #0d6efd;
+    }
+
+    .mobile-quick-cta-email {
+        background: #198754;
+    }
+
+    body {
+        padding-bottom: 58px;
+    }
 }
 
 /* ===== ANIMATIONS ===== */
