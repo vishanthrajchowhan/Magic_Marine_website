@@ -146,7 +146,7 @@ p {
 }
 
 .btn-yacht-group {
-    background: linear-gradient(135deg, #0f5132 0%, #198754 100%);
+    background: linear-gradient(135deg, #1e2f5e 0%, #3558a6 100%);
     color: var(--white);
     display: inline-flex;
     align-items: center;
@@ -163,6 +163,7 @@ p {
 }
 
 .btn-yacht-group:hover {
+    background: linear-gradient(135deg, #27407e 0%, #3c67c0 100%);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
@@ -355,6 +356,23 @@ p {
     backdrop-filter: blur(4px);
 }
 
+.hero-dealer-tag {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    padding: 0.6rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    background: rgba(0, 0, 0, 0.42);
+    color: #ffffff;
+    font-family: "Times New Roman", Times, serif;
+    font-size: clamp(0.78rem, 1.3vw, 1rem);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    line-height: 1.25;
+    border-radius: 6px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+}
+
 .hero-title {
     font-size: clamp(2.5rem, 6vw, 4rem);
     margin-bottom: 1.5rem;
@@ -382,7 +400,7 @@ section {
 
 .amazon-shop {
     background: linear-gradient(180deg, #f8fbff 0%, #eef4fb 100%);
-    padding: 56px 0;
+    padding: 40px 0;
 }
 
 .amazon-shop-card {
@@ -390,8 +408,31 @@ section {
     border: 1px solid var(--light-border);
     border-radius: 14px;
     box-shadow: var(--shadow-sm);
-    padding: 2rem;
+    padding: 1.5rem 2rem;
     text-align: center;
+}
+
+.amazon-logo-badge {
+    width: min(100%, 400px);
+    margin: 0 auto 0.65rem;
+    padding: 0.35rem 0.55rem;
+    border-radius: 22px;
+    background: linear-gradient(180deg, #0a0f17 0%, #05080d 100%);
+    border: 1px solid rgba(20, 42, 80, 0.45);
+    box-shadow: 0 10px 24px rgba(6, 13, 24, 0.35);
+}
+
+.amazon-store-logo {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: 58px;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center 49%;
+    clip-path: inset(0 0 14% 0);
+    filter: contrast(1.15) brightness(1.08) saturate(1.05);
+    border-radius: 14px;
 }
 
 .amazon-shop-card h2 {
@@ -400,6 +441,57 @@ section {
 
 .amazon-shop-card p {
     margin-bottom: 1.2rem;
+}
+
+/* ===== MONTHLY PROGRAM SECTION ===== */
+.monthly-program-section {
+    background: linear-gradient(180deg, #05070d 0%, #020308 100%);
+    padding: 84px 0;
+}
+
+.monthly-program-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+    align-items: start;
+    border-top: 1px solid rgba(45, 71, 126, 0.3);
+    padding-top: 1.2rem;
+}
+
+.monthly-program-left {
+    max-width: 560px;
+}
+
+.monthly-program-lead {
+    color: #f5f8ff;
+    font-size: clamp(1.15rem, 1.9vw, 2rem);
+    line-height: 1.35;
+    margin-bottom: 1rem;
+}
+
+.monthly-program-right h2 {
+    color: #f5f8ff;
+    margin-bottom: 1.1rem;
+}
+
+.monthly-program-right h3 {
+    color: #3d55d8;
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    margin: 1.4rem 0 0.7rem;
+}
+
+.monthly-program-list {
+    list-style: disc;
+    margin-left: 1.6rem;
+}
+
+.monthly-program-list li {
+    color: #3246c9;
+    font-weight: 600;
+    font-size: clamp(1rem, 1.65vw, 1.17rem);
+    line-height: 1.45;
+    margin-bottom: 0.45rem;
 }
 
 .section-header {
@@ -1483,6 +1575,26 @@ a.gallery-item:hover p {
         font-size: 1.1rem;
     }
 
+    .hero-dealer-tag {
+        margin-bottom: 1rem;
+        padding: 0.5rem 0.9rem;
+        letter-spacing: 0.06em;
+    }
+
+    .monthly-program-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .monthly-program-right h3 {
+        font-size: 1.5rem;
+    }
+
+    .amazon-store-logo {
+        height: 48px;
+        object-position: center 52%;
+    }
+
     .areas-content {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1558,6 +1670,32 @@ a.gallery-item:hover p {
 
     .hero-subtitle {
         font-size: 1rem;
+    }
+
+    .hero-dealer-tag {
+        margin-bottom: 0.85rem;
+        padding: 0.45rem 0.75rem;
+        font-size: 0.72rem;
+        letter-spacing: 0.05em;
+    }
+
+    .monthly-program-section {
+        padding: 56px 0;
+    }
+
+    .monthly-program-right h3 {
+        font-size: 1.25rem;
+    }
+
+    .amazon-store-logo {
+        height: 40px;
+        object-position: center 52%;
+    }
+
+    .amazon-logo-badge {
+        width: min(100%, 280px);
+        padding: 0.35rem 0.45rem;
+        border-radius: 18px;
     }
 
     .btn-large {
