@@ -373,6 +373,29 @@ p {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
 }
 
+.hero-yacht-group-logo-link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 1.35rem;
+    padding: 0.28rem 0.55rem;
+    border-radius: 12px;
+    background: #2f3f74;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.34);
+    transition: var(--transition);
+}
+
+.hero-yacht-group-logo-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32);
+}
+
+.hero-yacht-group-logo {
+    display: block;
+    width: min(100%, 420px);
+    height: auto;
+}
+
 .hero-title {
     font-size: clamp(2.5rem, 6vw, 4rem);
     margin-bottom: 1.5rem;
@@ -1581,6 +1604,15 @@ a.gallery-item:hover p {
         letter-spacing: 0.06em;
     }
 
+    .hero-yacht-group-logo-link {
+        margin-bottom: 1.1rem;
+        padding: 0.22rem 0.45rem;
+    }
+
+    .hero-yacht-group-logo {
+        width: min(100%, 320px);
+    }
+
     .monthly-program-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -1677,6 +1709,16 @@ a.gallery-item:hover p {
         padding: 0.45rem 0.75rem;
         font-size: 0.72rem;
         letter-spacing: 0.05em;
+    }
+
+    .hero-yacht-group-logo-link {
+        margin-bottom: 0.95rem;
+        padding: 0.2rem 0.38rem;
+        border-radius: 10px;
+    }
+
+    .hero-yacht-group-logo {
+        width: min(100%, 260px);
     }
 
     .monthly-program-section {
