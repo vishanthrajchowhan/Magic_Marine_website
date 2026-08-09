@@ -24,9 +24,17 @@ const securityHeaders = {
     'X-Frame-Options': 'SAMEORIGIN'
 };
 
+function getContentType(extname) {
+    const baseType = mimeTypes[extname] || 'application/octet-stream';
+    if (baseType.startsWith('text/') || baseType === 'application/json' || baseType === 'image/svg+xml') {
+        return `${baseType}; charset=utf-8`;
+    }
+    return baseType;
+}
+
 function getCacheControl(extname) {
     if (extname === '.html') return 'no-cache';
-    if (extname === '.css' || extname === '.js') return 'public, max-age=3600';
+    if (extname === '.css' || extname === '.js') return 'no-cache';
     if (['.png', '.jpg', '.jpeg', '.gif', '.svg', '.ico', '.webp'].includes(extname)) {
         return 'public, max-age=86400';
     }
@@ -52,7 +60,7 @@ const server = http.createServer((req, res) => {
     }
 
     const extname = String(path.extname(filePath)).toLowerCase();
-    const contentType = mimeTypes[extname] || 'application/octet-stream';
+    const contentType = getContentType(extname);
     const cacheControl = getCacheControl(extname);
 
     fs.readFile(filePath, (error, content) => {

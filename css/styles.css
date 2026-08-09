@@ -840,11 +840,15 @@ section {
 }
 
 .service-features li::before {
-    content: 'âœ“';
+    content: '';
     position: absolute;
     left: 0;
-    color: var(--accent-blue);
-    font-weight: bold;
+    top: 0.95rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--accent-blue);
+    transform: translateY(-50%);
 }
 
 .service-card-large .btn {
